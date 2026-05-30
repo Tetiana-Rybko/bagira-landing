@@ -18,7 +18,7 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
   try {
     setLoading(true);
 
-    const response = await fetch("https://bagira-app.uk/api/lead", {
+    const response = await fetch("/api/lead", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
