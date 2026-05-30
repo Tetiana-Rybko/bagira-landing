@@ -1,6 +1,11 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
+  if (req.method === "OPTIONS") {
+    res.status(200).end();
+    return;
+  }
+
   if (req.method !== "POST") {
     return res.status(405).json({ message: "Method not allowed" });
   }
@@ -16,16 +21,16 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   const text = `🔥 Нова заявка з сайту Bagira:
 
-👤 Ім'я: ${name || "-"}
-📞 Телефон: ${phone || "-"}
-💬 Коментар: ${comment || "-"}`;
+👤 Ім'я: ${name || "*-*"}
+📞 Телефон: ${phone || "*-*"}
+💬 Коментар: ${comment || "*-*"}`;
 
-  const telegramResponse = await fetch(
+  const telegramResponse: Response = await fetch(
     `https://api.telegram.org/bot${token}/sendMessage`,
     {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
         chat_id: adminId,
@@ -35,7 +40,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   );
 
   if (!telegramResponse.ok) {
-    return res.status(500).json({ message: "Telegram error" });
+    const errorText: string = await telegramResponse.text();
+    return res.status(500).json({
+      message: "Telegram error",
+      details: errorText,
+    });
   }
 
   return res.status(200).json({ message: "OK" });
