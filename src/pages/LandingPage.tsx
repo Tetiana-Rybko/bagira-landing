@@ -338,16 +338,23 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
       }}
     />
 
-    <div style={{ maxWidth: 620 }}>
+    <div
+      style={{
+        maxWidth: isMobile ? "100%" : 620,
+        width: "100%",
+        overflow: "hidden",
+      }}
+    >
       <h2
         style={{
           margin: 0,
-          fontSize: 52,
+          fontSize: isMobile ? 42 : 52,
           lineHeight: 1.08,
           color: "#6B3A0A",
           letterSpacing: "-1px",
           textTransform: "uppercase",
           fontWeight: 900,
+          wordBreak: "break-word",
         }}
       >
         ДАВАЙТЕ
