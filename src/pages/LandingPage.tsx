@@ -449,7 +449,7 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
 
 <section style={{ padding: "80px 24px" }}>
   <div style={{ maxWidth: 760, margin: "0 auto", ...cardStyle }}>
-    <h2 style={sectionTitleStyle}>Оставьте мне короткое сообщение и я связусь с Вами</h2>
+    <h2 style={sectionTitleStyle}>Оставьте мне короткое сообщение и я свяжусь с Вами</h2>
     <p style={sectionTextStyle}>А что если начать сейчас?
 
 Не обязательно иметь опыт в IT или разбираться в технологиях.
