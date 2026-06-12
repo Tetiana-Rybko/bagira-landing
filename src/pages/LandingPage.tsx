@@ -105,14 +105,15 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
   };
 
   return (
-    <div style={{ background: "#F6F3F5", color: "#2F2430" }}>
+    <div style={{ background: "#F6F3F5", color: "#2F2430",width: "100%", overflowX: "hidden"  }}>
       <section
   style={{
     minHeight: "100vh",
     position: "relative",
-    width: "100%vw",
+    width: "100%",
     boxSizing: "border-box",
     display: "flex",
+    flexDirection: isMobile ? "column" : "row",
     backgroundImage: "url('/images/rybka_tanya.jpg')",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
