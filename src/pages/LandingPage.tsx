@@ -1,6 +1,6 @@
 import {  useState } from "react";
 import type { FormEvent } from "react";
-import { FaPhone, FaTelegram, FaEnvelope, FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa";
+import { FaPhone, FaTelegram, FaEnvelope, FaInstagram, FaTiktok} from "react-icons/fa";
 
 
 export default function LandingPage() {
@@ -31,16 +31,16 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     });
 
     if (!response.ok) {
-      throw new Error("Помилка відправки");
+      throw new Error("Ошибка отправки");
     }
 
-    setSuccessMessage("ДЯКУЄМО! Наш менеджер скоро зв'яжеться з Вами!");
+    setSuccessMessage("Спасибо! я скоро свяжусь с Вами!");
     setName("");
     setPhone("");
     setComment("");
   } catch (err) {
     console.error(err);
-    alert("Помилка при відправці");
+    alert("Ошибка при отправке");
   } finally {
     setLoading(false);
   }
@@ -49,21 +49,22 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
   const sectionTitleStyle = {
     margin: 0,
     fontSize: 32,
-    color: "#4A0F28",
+    color: "#6B3A0A",
     textAlign: "center" as const,
   };
 
   const sectionTextStyle = {
     margin: "12px auto 0",
     maxWidth: 760,
-    color: "#5E4B55",
+    color: "#8B5A2B",
     fontSize: 18,
     lineHeight: 1.6,
     textAlign: "center" as const,
   };
 
   const cardStyle = {
-    background: "#FFFFFF",
+    background: "#F8F3ED",
+    border: "1px solid #E7D8C9",
     borderRadius: 16,
     padding: 24,
     boxShadow: "0 8px 24px rgba(0,0,0,0.06)",
@@ -75,7 +76,7 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
       gap: 10,
       padding: "14px 18px",
       borderRadius: 12,
-      background: "#5A1432",
+      background: "#C58A4A",
       color: "#FFFFFF",
       textDecoration: "none",
       fontWeight: 700,
@@ -83,7 +84,7 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     };
   const buttonPrimaryStyle = {
     display: "inline-block",
-    background: "#4A0F28",
+    background: "#C58A4A",
     color: "#FFFFFF",
     textDecoration: "none",
     borderRadius: 10,
@@ -93,170 +94,178 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     cursor: "pointer",
   };
 
-  const buttonSecondaryStyle = {
-    display: "inline-block",
-    background: "#FFFFFF",
-    color: "#4A0F28",
-    textDecoration: "none",
-    borderRadius: 10,
-    padding: "14px 22px",
-    fontWeight: 700,
-    border: "1px solid #D9C3CF",
-    cursor: "pointer",
-  };
-
-
-
   return (
     <div style={{ background: "#F6F3F5", color: "#2F2430" }}>
       <section
+  style={{
+    minHeight: "100vh",
+    position: "relative",
+    display: "flex",
+    alignItems: "center",
+    backgroundImage: "url('/images/rybka_tanya.jpg')",
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "80% center",
+    padding: "40px 24px",
+    overflow: "hidden",
+  }}
+>
+  <div
+    style={{
+      position: "absolute",
+      inset: 0,
+      background:
+        "linear-gradient(90deg, rgba(255,244,232,0.88) 0%, rgba(255,244,232,0.92) 32%, rgba(255,244,232,0.45) 48%, rgba(255,244,232,0.05) 68%, rgba(255,244,232,0) 100%)",
+      zIndex: 1,
+    }}
+  />
+
+  <div
+    style={{
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+      padding: "28px 48px",
+      boxSizing: "border-box",
+      zIndex: 3,
+    }}
+  >
+    <div>
+      <div style={{ fontSize: 52, fontWeight: 800, color: "#B8895A", lineHeight: 1 }}>
+        Татьяна Рыбко
+      </div>
+      <div style={{ marginTop: 18, fontSize: 28, fontWeight: 600, color: "#B8895A" }}>
+        партнер MetaBox
+      </div>
+    </div>
+
+    <nav
+      style={{
+        display: "flex",
+        gap: 28,
+        fontWeight: 600,
+        fontSize: 18,
+      }}
+    >
+      <a href="#about" style={{ color: "#FFFFFF", textDecoration: "none" }}>
+        обо мне
+      </a>
+      <a href="#jobs" style={{ color: "#FFFFFF", textDecoration: "none" }}>
+        возможности
+      </a>
+      <a href="#contacts" style={{ color: "#FFFFFF", textDecoration: "none" }}>
+        контакты
+      </a>
+    </nav>
+  </div>
+
+  <div
+    style={{
+      position: "relative",
+      zIndex: 2,
+      maxWidth: 620,
+      marginLeft: 48,
+      paddingTop: 120,
+      textAlign: "left",
+    }}
+  >
+    <h1
+      style={{
+        margin: 0,
+        fontSize: 62,
+        lineHeight: 1.08,
+        fontWeight: 900,
+        color: "#6B3A0A",
+        letterSpacing: "-1px",
+      }}
+    >
+      ЖИЗНЬ,
+      <br />
+      КОТОРУЮ ВЫ
+      <br />
+      СОЗДАЕТЕ.
+    </h1>
+
+    <p
+      style={{
+        margin: "28px 0 0",
+        maxWidth: 520,
+        fontSize: 24,
+        lineHeight: 1.45,
+        color: "#9A6A3A",
+        fontWeight: 500,
+      }}
+    >
+      Помогу разобраться в MetaBox, освоить современные AI-инструменты
+      и открыть новые возможности для дохода.
+    </p>
+
+    <p
+      style={{
+        margin: "28px 0 0",
+        maxWidth: 520,
+        fontSize: 18,
+        lineHeight: 1.7,
+        color: "#8B5A2B",
+      }}
+    >
+      Для тех, кто ищет дополнительный доход.
+      <br />
+      Для тех, кто хочет освоить AI с нуля.
+      <br />
+      Практично. Пошагово. Поддержка на каждом этапе.
+    </p>
+
+    <div
+      style={{
+        marginTop: 36,
+        display: "flex",
+        gap: 16,
+        flexWrap: "wrap",
+      }}
+    >
+      <a
+        href="#contacts"
         style={{
-          minHeight: "100vh",
-          position: "relative",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          backgroundImage:
-            " url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          padding: "40px 24px",
+          display: "inline-block",
+          background: "#B8895A",
+          color: "#FFFFFF",
+          textDecoration: "none",
+          borderRadius: 10,
+          padding: "16px 28px",
+          fontWeight: 700,
+          fontSize: 17,
+          border: "none",
         }}
       >
-        <div
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            padding: "24px 40px",
-            color: "#FFFFFF",
-            boxSizing: "border-box",
-          }}
-        >
-          <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-            <img
-              src="/LOGO/logo-bagira.png"
-              alt="Багіра"
-              style={{
-                width: window.innerWidth < 768 ? 110 : 170,
-                height: "auto",
-                objectFit: "contain",
-                borderRadius: 0,
-                background: "rgba(255,255,255,0.08)",
-              }}
-            />
-          </div>
+        📞 Получить консультацию
+      </a>
 
-          <nav
-            style={{
-              position: "absolute",
-              top: 20,
-              right: 40,
-              display: "flex",
-              gap: 24,
-              color: "#fff",
-              fontWeight: 500,
-              fontSize: 14,
-            }}
-          >
-            <a href="#about" style={{ color: "#FFFFFF", textDecoration: "none" }}>
-              Про нас
-            </a>
-            <a href="#jobs" style={{ color: "#FFFFFF", textDecoration: "none" }}>
-              Вакансії
-            </a>
-            <a href="#contacts" style={{ color: "#FFFFFF", textDecoration: "none" }}>
-              Контакти
-            </a>
-          </nav>
-        </div>
-
-        <div
-          style={{
-            maxWidth: 900,
-            textAlign: "center",
-            color: "#FFFFFF",
-            background: "rgba(40, 17, 27, 0.55)",
-            padding: "32px 28px",
-            borderRadius: 24,
-            backdropFilter: "blur(2px)",
-          }}
-        >
-          <h1
-            style={{
-              margin: 0,
-              fontSize: 56,
-              color: "#FFFFFF",
-              textShadow: "0 3px 10px rgba(0,0,0,0.07",
-              lineHeight: 1.1,
-              fontWeight: 800,
-            }}
-          >
-            ПІДБЕРЕМО НЕРУХОМІСТЬ БЕЗ СТРЕСУ ТА РИЗИКІВ
-          </h1>
-
-          <p
-            style={{
-              margin: "20px auto 0",
-              maxWidth: 760,
-              fontSize: 22,
-              lineHeight: 1.5,
-              color: "#F3EAF0",
-            }}
-          >
-            Перевірені об’єкти • Реальні ціни • Повний супровід угоди
-          </p>
-
-          <p
-            style={{
-              margin: "18px auto 0",
-              maxWidth: 760,
-              fontSize: 18,
-              lineHeight: 1.5,
-              color: "#F3EAF0",
-            }}
-          >
-            Працюємо з перевіреними об&apos;єктами та супроводжуємо вас до передачі ключів
-          </p>
-            <div
-              style={{
-                marginTop: 12,
-                fontSize: 16,
-                color: "#ffffff",
-                opacity: 0.9,
-              }}
-            >
-             Працюємо в Ірпені, Бучі, Гостомелі та прилеглих населених пунктах
-           </div>
-
-          <div
-            style={{
-              marginTop: 32,
-              display: "flex",
-              gap: 14,
-              justifyContent: "center",
-              flexWrap: "wrap",
-            }}
-          >
-            <a href="tel:+380753549445" style={buttonPrimaryStyle}>
-              📞 Отримати консультацію
-            </a>
-
-            <a
-              href="https://t.me/bagirarieltor"
-              target="_blank"
-              rel="noreferrer"
-              style={buttonSecondaryStyle}
-            >
-              Написати в Telegram
-            </a>
-          </div>
-        </div>
-      </section>
+      <a
+        href="https://t.me/rybka_yara"
+        target="_blank"
+        rel="noreferrer"
+        style={{
+          display: "inline-block",
+          background: "rgba(255,255,255,0.65)",
+          color: "#9A6A3A",
+          textDecoration: "none",
+          borderRadius: 10,
+          padding: "16px 28px",
+          fontWeight: 700,
+          fontSize: 17,
+          border: "1px solid #B8895A",
+        }}
+      >
+        Написать в Telegram
+      </a>
+    </div>
+  </div>
+</section>
 
       <section style={{ padding: "80px 24px 20px" }}>
         <div
@@ -269,107 +278,128 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
           }}
         >
           {[
-            { value: "10+", label: "років досвіду" },
-            { value: "600+", label: "клієнтів" },
-            { value: "300+", label: "угод" },
-            { value: "100%", label: "уваги до клієнта" },
+              { value: '💡', label: 'AI-инструменты' },
+              { value: '🤝', label: 'Поддержка' },
+              { value: '🌍', label: 'Онлайн' },
+              { value: '🚀', label: 'Результат' },
           ].map((item) => (
             <div key={item.label} style={{ ...cardStyle, textAlign: "center" }}>
-              <div style={{ fontSize: 42, fontWeight: 800, color: "#4A0F28" }}>{item.value}</div>
-              <div style={{ marginTop: 8, color: "#6E5B65", fontSize: 16 }}>{item.label}</div>
+              <div style={{ fontSize: 42, fontWeight: 800, color: "#8B5A2B" }}>{item.value}</div>
+              <div style={{ marginTop: 8, color: "#6B4E3D", fontSize: 16,fontWeight:600 }}>{item.label}</div>
             </div>
           ))}
         </div>
       </section>
 
-      <section id="about" style={{ padding: "80px 24px" }}>
-        <div
-          style={{
-            maxWidth: 1200,
-            margin: "0 auto",
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-            gap: 28,
-            alignItems: "center",
-          }}
-        >
-          <div
-            style={{
-              minHeight: 520,
-              borderRadius: 20,
-              backgroundImage: "url('/agent-photo.jpg')",
-              backgroundSize: "cover",
-              backgroundPosition: "center top",
-              boxShadow: "0 8px 24px rgba(0,0,0,0.08)",
-            }}
-          />
+      <section id="about" style={{ padding: "80px 24px", background: "#F8F3ED" }}>
+  <div
+    style={{
+      maxWidth: 1400,
+      margin: "0 auto",
+      display: "grid",
+      gridTemplateColumns: "1.15fr 0.85fr",
+      gap: 56,
+      alignItems: "center",
+    }}
+  >
+    <img
+      src="/images/rybka_t.jpg"
+      alt="Татьяна Рыбко"
+      style={{
+        width: "100%",
+        height: 760,
+        objectFit: "cover",
+        objectPosition: "center center",
+        borderRadius: 28,
+        boxShadow: "0 20px 60px rgba(0,0,0,0.12)",
+      }}
+    />
 
-          <div>
-            <h2 style={{ ...sectionTitleStyle, textAlign: "left" }}>Про мене та мою команду</h2>
+    <div style={{ maxWidth: 620 }}>
+      <h2
+        style={{
+          margin: 0,
+          fontSize: 52,
+          lineHeight: 1.08,
+          color: "#6B3A0A",
+          letterSpacing: "-1px",
+          textTransform: "uppercase",
+          fontWeight: 900,
+        }}
+      >
+        Как я начала все заново
+        <br />
+        в другой стране
+      </h2>
 
-            <p style={{ ...sectionTextStyle, textAlign: "left", margin: "16px 0 0" }}>
-              Вітаємо в «Багіра»!
-            </p>
+      <p style={{ ...sectionTextStyle, textAlign: "left", margin: "28px 0 0" }}>
+        Меня зовут Татьяна.
+      </p>
 
-            <p style={{ ...sectionTextStyle, textAlign: "left", margin: "12px 0 0" }}>
-              Ми — команда професіоналів у сфері нерухомості, яка допомагає клієнтам безпечно
-              купувати, продавати, інвестувати та знаходити найкращі рішення під свій запит.
-            </p>
+      <p style={{ ...sectionTextStyle, textAlign: "left", margin: "18px 0 0" }}>
+        Сейчас я живу в Германии и знаю, как непросто начать всё заново в другой стране.
+        Я столкнулась с языковым барьером, новыми правилами и поиском возможностей для заработка.
+      </p>
 
-            <p style={{ ...sectionTextStyle, textAlign: "left", margin: "12px 0 0" }}>
-              Ми працюємо на ринку вже багато років, добре знаємо кожний куточок у радіусі 100 км
-              від Києва, супроводжуємо клієнта на кожному етапі та беремо на себе всі складні
-              питання: перевірку документів, переговори, організацію переглядів і повний супровід
-              угоди.
-            </p>
+      <p style={{ ...sectionTextStyle, textAlign: "left", margin: "18px 0 0" }}>
+        Даже имея профессию разработчика, я понимала, что найти подходящую работу бывает непросто.
+        Поэтому я начала искать современные способы заработка онлайн.
+      </p>
 
-            <p style={{ ...sectionTextStyle, textAlign: "left", margin: "12px 0 0" }}>
-              Наша мета — зробити процес з нерухомістю максимально простим, зрозумілим і безпечним
-              для вас.
-            </p>
+      <p style={{ ...sectionTextStyle, textAlign: "left", margin: "18px 0 0" }}>
+        Так я познакомилась с MetaBox. Уже во время первой презентации я поняла,
+        что хочу стать частью этой команды и развиваться вместе с людьми,
+        которые смотрят в будущее.
+      </p>
 
-            <div
-              style={{
-                marginTop: 24,
-                display: "grid",
-                gap: 10,
-                color: "#4A0F28",
-                fontWeight: 600,
-              }}
-            >
-              <div>✔️ Багато років досвіду на ринку нерухомості</div>
-              <div>✔️ Працюємо в Ірпені, Бучі, Гостомелі та прилеглих населених пунктах</div>
-              <div>✔️ Перевіряємо документи перед угодою</div>
-              <div>✔️ Допомагаємо уникнути ризиків і переплат</div>
-              <div>✔️ Супроводжуємо клієнта до результату</div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <p style={{ ...sectionTextStyle, textAlign: "left", margin: "18px 0 0" }}>
+        Сегодня я помогаю другим людям разобраться в возможностях платформы,
+        освоить AI-инструменты и открыть для себя новые источники дохода.
+      </p>
+
+      <div
+        style={{
+          marginTop: 28,
+          display: "grid",
+          gap: 12,
+          color: "#8B5A2B",
+          fontWeight: 700,
+          fontSize: 17,
+        }}
+      >
+        <div>✔️ Живу и развиваюсь в Германии</div>
+        <div>✔️ Искала возможность заработка онлайн и нашла её в MetaBox</div>
+        <div>✔️ Использую современные AI-инструменты в работе</div>
+        <div>✔️ Помогаю новичкам разобраться в платформе</div>
+        <div>✔️ Сопровождаю на первых шагах обучения</div>
+      </div>
+    </div>
+  </div>
+</section>
 
       <section style={{ padding: "80px 24px", background: "#F1EBEF" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-          <h2 style={sectionTitleStyle}>Наші послуги</h2>
-          <p style={sectionTextStyle}>Допомагаємо продати, здати або знайти житло під ваш запит</p>
+          <h2 style={sectionTitleStyle}>Чем я могу быть полезной</h2>
+          <p style={sectionTextStyle}>Делюсь своим опытом и помогаю освоить современные инструменты для новых возможностей и дополнительного дохода.</p>
 
           <div
             style={{
               marginTop: 36,
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+              gridTemplateColumns: 'repeat(3, 1fr)',
               gap: 20,
             }}
           >
             {[
-              "Підбір квартири під ваш бюджет і запит",
-              "Продаж нерухомості",
-              "Інвестиції в нерухомість",
-              "Оренда житла",
-              "Повний юридичний супровід",
-              "Консультація по ринку",
+              "Покажу сервисы, которые помогают экономить время и работать эффективнее.",
+              "Расскажу о современных направлениях заработка и вариантах развития онлайн.",
+              "Помогу разобраться в платформе и отвечу на вопросы на первых этапах.",
+              "Онлайн-формат позволяет обучаться и развиваться независимо от страны проживания.",
+              "Покажу, как использовать привычные сервисы для обучения, общения и работы.",
+              "Не оставлю один на один с информацией — помогу двигаться поэтапно."
             ].map((service) => (
               <div key={service} style={cardStyle}>
-                <div style={{ fontSize: 18, fontWeight: 700, color: "#4A0F28" }}>{service}</div>
+                <div style={{ fontSize: 18, fontWeight: 700, color: "#8B5A2B" }}>{service}</div>
               </div>
             ))}
           </div>
@@ -378,62 +408,39 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
 
       <section style={{ padding: "80px 24px" }}>
         <div style={{ maxWidth: 1000, margin: "0 auto", ...cardStyle, textAlign: "center" }}>
-          <h2 style={sectionTitleStyle}>Не знаєте, яку квартиру обрати?</h2>
+          <h2 style={sectionTitleStyle}>Готовы узнать больше?</h2>
           <p style={sectionTextStyle}>
-            На ринку багато варіантів, але не всі безпечні. Ми підберемо перевірені об&apos;єкти,
-            які підходять саме вам, і допоможемо уникнути помилок.
+            Я сама прошла путь от поиска возможностей в новой стране до знакомства с MetaBox.
+              <br />
+            С удовольствием поделюсь своим опытом и отвечу на ваши вопросы.
           </p>
 
           <div style={{ marginTop: 28 }}>
-            <a href="tel:+380753549445" style={buttonPrimaryStyle}>
-              📞 Зателефонувати зараз
+            <a href="tel:+4915155688729" style={buttonPrimaryStyle}>
+              📞 позвонить сейчас
             </a>
           </div>
         </div>
       </section>
 
 
-<section style={{ padding: "80px 24px", background: "#4A0F28", color: "#FFFFFF" }}>
-  <div style={{ maxWidth: 1000, margin: "0 auto", textAlign: "center" }}>
-    <h2 style={{ margin: 0, fontSize: 38 }}>Маємо багато класних варіантів для перегляду</h2>
 
-    <p
-      style={{
-        margin: "16px auto 0",
-        maxWidth: 760,
-        fontSize: 20,
-        lineHeight: 1.6,
-        color: "#F3EAF0",
-      }}
-    >
-      Для отримання додаткової інформації та запису телефонуйте прямо зараз
-    </p>
-
-    <div
-      style={{
-        marginTop: 28,
-        display: "grid",
-        gap: 10,
-        justifyContent: "center",
-        fontSize: 22,
-        fontWeight: 700,
-      }}
-    >
-      <a href="tel:+380753549445" style={{ color: "#FFFFFF", textDecoration: "none" }}>
-        +38 (075) 354 94 45
-      </a>
-    </div>
-  </div>
-</section>
 
 <section style={{ padding: "80px 24px" }}>
   <div style={{ maxWidth: 760, margin: "0 auto", ...cardStyle }}>
-    <h2 style={sectionTitleStyle}>Залиште заявку</h2>
-    <p style={sectionTextStyle}>Ми підберемо для вас варіанти та передзвонемо протягом години</p>
+    <h2 style={sectionTitleStyle}>Оставьте мне короткое сообщение и я связусь с Вами</h2>
+    <p style={sectionTextStyle}>А что если начать сейчас?
+
+Не обязательно иметь опыт в IT или разбираться в технологиях.
+
+Главное — желание развиваться и использовать возможности, которые доступны сегодня каждому.
+
+Я расскажу о современных инструментах, обучении, вариантах развития и помогу сделать первый шаг.
+</p>
 
     <form onSubmit={handleSubmit} style={{ marginTop: 28, display: "grid", gap: 14 }}>
       <input
-        placeholder="Ваше ім'я"
+        placeholder="Ваше имя"
         value={name}
         onChange={(e) => setName(e.target.value)}
         style={{
@@ -455,7 +462,7 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         }}
       />
       <textarea
-        placeholder="Коментар"
+        placeholder="Короткое сообщение"
         value={comment}
         onChange={(e) => setComment(e.target.value)}
         rows={5}
@@ -468,84 +475,17 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         }}
       />
       <button type="submit" style={buttonPrimaryStyle} disabled={loading}>
-        {loading ? "Відправляємо..." : "Отримати варіанти"}
+        {loading ? "Отправляем..." : "Получить обратную связь"}
       </button>
     </form>
   </div>
 </section>
 
-<section style={{ padding: "60px 24px", background: "#F6F3F5" }}>
-  <div style={{ maxWidth: 1100, margin: "0 auto", textAlign: "center" }}>
-    <h2 style={{ fontSize: 32, margin: 0, color: "#4A0F28" }}>
-      Ми на платформах нерухомості
-    </h2>
-
-    <p
-      style={{
-        marginTop: 16,
-        color: "#5E4B55",
-        fontSize: 18,
-        lineHeight: 1.6,
-        maxWidth: 760,
-        marginLeft: "auto",
-        marginRight: "auto",
-      }}
-    >
-      Наші актуальні об’єкти також представлені на популярних платформах нерухомості.
-    </p>
-
-    <div
-      style={{
-        marginTop: 28,
-        display: "flex",
-        gap: 16,
-        justifyContent: "center",
-        flexWrap: "wrap",
-      }}
-    >
-      <a
-        href="https://dom.ria.com/uk/agency-31606.html"
-        target="_blank"
-        rel="noreferrer"
-        style={{
-          display: "inline-block",
-          padding: "14px 24px",
-          borderRadius: 12,
-          background: "#4A0F28",
-          color: "#FFFFFF",
-          textDecoration: "none",
-          fontWeight: 700,
-        }}
-      >
-        Переглянути на DOM.RIA
-      </a>
-
-      <a
-        href="https://0933549445.rieltor.ua/"
-        target="_blank"
-        rel="noreferrer"
-        style={{
-          display: "inline-block",
-          padding: "14px 24px",
-          borderRadius: 12,
-          border: "1px solid #4A0F28",
-          color: "#FFFFFF",
-          textDecoration: "none",
-          fontWeight: 700,
-          background: "#4A0F28",
-          transition: "0.2s",
-        }}
-      >
-        Переглянути на RIELTOR.UA
-      </a>
-    </div>
-  </div>
-</section>
 
 <section id="contacts" style={{ padding: "80px 24px 100px", background: "#F1EBEF" }}>
   <div style={{ maxWidth: 1000, margin: "0 auto" }}>
-    <h2 style={sectionTitleStyle}>Контакти</h2>
-    <p style={sectionTextStyle}>Зв&apos;яжіться з нами зручним для вас способом</p>
+    <h2 style={sectionTitleStyle}>Контакты</h2>
+    <p style={sectionTextStyle}>Звяжитесь со мной удобным для Вас способом</p>
 
     <div
       style={{
@@ -556,36 +496,36 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
       }}
     >
       <a
-        href="tel:+380753549445"
+        href="tel:+4915155688729"
         style={contactButtonStyle}
-        onMouseEnter={(e) => (e.currentTarget.style.background = "#7A1B45")}
-        onMouseLeave={(e) => (e.currentTarget.style.background = "#5A1432")}
+        onMouseEnter={(e) => (e.currentTarget.style.background = "#B67A3A")}
+        onMouseLeave={(e) => (e.currentTarget.style.background = "#C58A4A")}
       >
         <FaPhone /> Телефон
       </a>
 
       <a
-        href="https://t.me/bagirarieltor"
+        href="https://t.me/rybka_yara"
         target="_blank"
         rel="noreferrer"
         style={contactButtonStyle}
-        onMouseEnter={(e) => (e.currentTarget.style.background = "#7A1B45")}
-        onMouseLeave={(e) => (e.currentTarget.style.background = "#5A1432")}
+        onMouseEnter={(e) => (e.currentTarget.style.background = "#B67A3A")}
+        onMouseLeave={(e) => (e.currentTarget.style.background = "#C58A4A")}
       >
         <FaTelegram /> Telegram
       </a>
 
       <a
-        href="mailto:ukrainarealtorbagira@gmail.com"
+        href="mailto:tanyarybko28@gmail.com"
         style={contactButtonStyle}
-        onMouseEnter={(e) => (e.currentTarget.style.background = "#7A1B45")}
-        onMouseLeave={(e) => (e.currentTarget.style.background = "#5A1432")}
+        onMouseEnter={(e) => (e.currentTarget.style.background = "#B67A3A")}
+        onMouseLeave={(e) => (e.currentTarget.style.background = "#C58A4A")}
       >
         <FaEnvelope /> Email
       </a>
     </div>
 
-    <h2 style={{ ...sectionTitleStyle, marginTop: 56 }}>Соціальні мережі</h2>
+    <h2 style={{ ...sectionTitleStyle, marginTop: 56 }}>Социальные сети</h2>
 
     <div
       style={{
@@ -596,66 +536,31 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
       }}
     >
       <a
-        href="https://instagram.com/bagira.irpin"
+        href="https://www.instagram.com/tanij_r?igsh=MWZxdGkxOGM2ZzAx&utm_source=qr"
         target="_blank"
         rel="noreferrer"
         style={contactButtonStyle}
-        onMouseEnter={(e) => (e.currentTarget.style.background = "#7A1B45")}
-        onMouseLeave={(e) => (e.currentTarget.style.background = "#5A1432")}
+        onMouseEnter={(e) => (e.currentTarget.style.background = "#B67A3A")}
+        onMouseLeave={(e) => (e.currentTarget.style.background = "#C58A4A")}
       >
         <FaInstagram /> Instagram
       </a>
 
       <a
-        href="https://www.tiktok.com/@bagira.irpin"
+        href="https://www.tiktok.com/@yara....r?_r=1"
         target="_blank"
         rel="noreferrer"
         style={contactButtonStyle}
-        onMouseEnter={(e) => (e.currentTarget.style.background = "#7A1B45")}
-        onMouseLeave={(e) => (e.currentTarget.style.background = "#5A1432")}
+        onMouseEnter={(e) => (e.currentTarget.style.background = "#B67A3A")}
+        onMouseLeave={(e) => (e.currentTarget.style.background = "#C58A4A")}
       >
         <FaTiktok /> TikTok
       </a>
 
-      <a
-        href="https://www.youtube.com/@bagira-irpin"
-        target="_blank"
-        rel="noreferrer"
-        style={contactButtonStyle}
-        onMouseEnter={(e) => (e.currentTarget.style.background = "#7A1B45")}
-        onMouseLeave={(e) => (e.currentTarget.style.background = "#5A1432")}
-      >
-        <FaYoutube /> YouTube
-      </a>
+
     </div>
   </div>
 </section>
-
-<section id="jobs" style={{ padding: "80px 24px" }}>
-  <div style={{ maxWidth: 1000, margin: "0 auto", ...cardStyle, textAlign: "center" }}>
-    <h2 style={sectionTitleStyle}>Вакансії</h2>
-    <p style={sectionTextStyle}>
-      Шукаємо активних рієлторів у команду Bagira. Якщо вам цікава нерухомість, продажі та
-      розвиток — зв&apos;яжіться з нами.
-    </p>
-
-    <div style={{ marginTop: 28 }}>
-      <a href="tel:+380753549445" style={buttonPrimaryStyle}>
-        📞 Дізнатись про вакансії
-      </a>
-    </div>
-  </div>
-</section>
-
-<div style={{ marginTop: 40 }}>
-  <h2>Квартири в містах</h2>
-
-  <ul>
-    <li><a href="/kvartiry-irpen">Квартири в Ирпені</a></li>
-    <li><a href="/kvartiry-bucha">Квартири в Бучі</a></li>
-    <li><a href="/kvartiry-gostomel">Квартири в Гостомелі</a></li>
-  </ul>
-</div>
 </div>
 );
 
