@@ -213,7 +213,9 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
       }}
     >
       ЗАРАБОТОК
+      <br />
       ОНЛАЙН
+      <br />
       БЕЗ ОПЫТА
     </p>
 
