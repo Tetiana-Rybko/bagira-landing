@@ -110,6 +110,8 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
   style={{
     minHeight: "100vh",
     position: "relative",
+    width: "100%",
+    boxSizing: "border-box",
     display: "flex",
     backgroundImage: "url('/images/rybka_tanya.jpg')",
     backgroundSize: "cover",
@@ -314,9 +316,9 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
       maxWidth: 1400,
       margin: "0 auto",
       display: "grid",
-      gridTemplateColumns: "1.15fr 0.85fr",
-      gap: 56,
       alignItems: "center",
+      gridTemplateColumns: isMobile ? "1fr" : "1.15fr 0.85fr",
+      gap: isMobile ? 28 : 56,
     }}
   >
     <img
@@ -324,7 +326,7 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
       alt="Татьяна Рыбко"
       style={{
         width: "100%",
-        height: 760,
+        height: isMobile ? 360 : 760,
         objectFit: "cover",
         objectPosition: "center center",
         borderRadius: 28,
