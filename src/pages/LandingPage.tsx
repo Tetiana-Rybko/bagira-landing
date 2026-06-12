@@ -110,7 +110,7 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
   style={{
     minHeight: "100vh",
     position: "relative",
-    width: "100%",
+    width: "100%vw",
     boxSizing: "border-box",
     display: "flex",
     backgroundImage: "url('/images/rybka_tanya.jpg')",
@@ -188,7 +188,7 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     <h1
       style={{
         margin: 0,
-        fontSize: isMobile ? 34 : 62,
+        fontSize: isMobile ? 42 : 62,
         lineHeight: isMobile ? 1.05 : 1.08,
         fontWeight: 900,
         color: "#6B3A0A",
@@ -206,7 +206,7 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
       style={{
         margin: "28px 0 0",
         maxWidth: isMobile ? 260 : 520,
-        fontSize: isMobile ? 16 : 24,
+        fontSize: isMobile ? 18 : 24,
         lineHeight: 1.45,
         color: "#9A6A3A",
         fontWeight: 500,
@@ -405,7 +405,7 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
             style={{
               marginTop: 36,
               display: "grid",
-              gridTemplateColumns: 'repeat(3, 1fr)',
+              gridTemplateColumns:  isMobile ? "1fr" : "repeat(3, 1fr)",
               gap: 20,
             }}
           >
