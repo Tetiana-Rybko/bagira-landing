@@ -138,12 +138,13 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
       top: 0,
       left: 0,
       width: "100%",
-      justifyContent: "space-between",
-      alignItems: "center",
+      justifyContent: isMobile ? "flex-start" : "space-between",
+      alignItems: isMobile ? "flex-start" : "center",
       boxSizing: "border-box",
       zIndex: 3,
       position: isMobile ? "relative" : "absolute",
-      display: isMobile ? "block" : "flex",
+      display: "flex",
+      flexDirection: isMobile ? "column" : "row",
       padding: isMobile ? "0" : "28px 48px",
     }}
   >
@@ -183,7 +184,7 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
       textAlign: "left",
       maxWidth: isMobile ? "100%" : 620,
       marginLeft: isMobile ? 0 : 48,
-      paddingTop: isMobile ? 24 : 120,
+      paddingTop: isMobile ? 12 : 120,
     }}
   >
     <h1
