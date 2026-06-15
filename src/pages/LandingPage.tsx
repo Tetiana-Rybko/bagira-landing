@@ -204,21 +204,22 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     <div
       style={{
         width: "fit-content",
-        maxWidth: isMobile ? 320 : 520,
+        maxWidth: isMobile ? 250 : 520,
         background: isMobile
-          ? "rgba(255,255,255,0.82)"
+          ? "rgba(255,255,255,0.35)"
           : "transparent",
-        borderRadius: isMobile ? 18 : 0,
-        padding: isMobile ? "14px 16px" : 0,
+        borderRadius: isMobile ? 16 : 0,
+        padding: isMobile ? "10px 12px" : 0,
       }}
     >
       <p
         style={{
-          margin: "28px 0 0",
+          margin: 0,
+          marginTop: isMobile ? 60 : 0,
           maxWidth: isMobile ? 300 : 520,
           fontSize: isMobile ? 17 : 24,
           lineHeight: 1.45,
-          color: "#9A6A3A",
+          color: "#54341A",
           fontWeight: 500,
         }}
       >
@@ -240,7 +241,7 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
           fontWeight: 500,
           fontSize: isMobile ? 14 : 20,
           lineHeight: 1.6,
-          color: "#6B4226",
+          color: "#4A2D18",
         }}
       >
         <em>
