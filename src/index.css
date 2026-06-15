@@ -21,3 +21,8 @@ body {
 a {
   color: inherit;
 }
+input::placeholder,
+textarea::placeholder {
+  font-style: italic;
+  color: #A07A52;
+}

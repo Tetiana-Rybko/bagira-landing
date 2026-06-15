@@ -1,6 +1,7 @@
 
 import type { FormEvent } from "react";
-import { FaPhone, FaTelegram, FaEnvelope, FaInstagram, FaTiktok} from "react-icons/fa";
+import { FaTelegram, FaEnvelope, FaInstagram, FaTiktok } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa6";
 import {useEffect, useState} from "react";
 
 export default function LandingPage() {
@@ -348,109 +349,119 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
       </p>
 
       <p style={{ ...sectionTextStyle, textAlign: "left", margin: "18px 0 0" }}>
-        После переезда в другую страну, я столкнулась с теми же вопросами, что и многие: новый язык, новая среда и поиск
-        возможностей для развития.
+        После переезда в новую страну,мне пришлось заново искать своё направление для развития и работы.
 
       </p>
 
       <p style={{ ...sectionTextStyle, textAlign: "left", margin: "18px 0 0" }}>
         Мне хотелось найти не просто дополнительный источник дохода, а современное направление,
           в котором можно расти шаг за шагом независимо от профессии и места проживания.
+      <p
+          style={{
+            margin: "32px 0",
+            color: "#A15E2A",
+            fontStyle: "italic",
+            fontWeight: 600,
+            fontSize: isMobile ? 20 : 24,
+            lineHeight: 1.6,
+          }}
+        >
+         Я не искала лёгких денег и волшебных кнопок.
+      </p>
+        Мне было важно найти направление, которое можно изучать постепенно, шаг за шагом, совмещая это с обычной жизнью.
       </p>
 
       <p style={{ ...sectionTextStyle, textAlign: "left", margin: "18px 0 0" }}>
-        Так я познакомилась с MetaBox. Меня привлекло то, что здесь создана целая экосистема для обучения и развития:
-        даже человек без опыта может шаг за шагом освоить современные AI-инструменты
-        и научиться применять их на практике.
-
-        В процессе обучения рядом находятся наставники и коучи, которые помогают разобраться в материалах и отвечают
-        на возникающие вопросы. Кроме того, внутри экосистемы есть возможности для поиска проектов и
-        работы через собственную биржу труда.
+         Именно поэтому я делюсь только тем, что изучаю и проверяю сама.
       </p>
 
-      <p style={{ ...sectionTextStyle, textAlign: "left", margin: "18px 0 0" }}>
-        Сегодня я продолжаю изучать AI-инструменты,
-        открываю для себя новые цифровые возможности и развиваюсь вместе с сообществом единомышленников.
-      </p>
-
-      <div
-        style={{
-          marginTop: 28,
-          display: "grid",
-          gap: 12,
-          color: "#8B5A2B",
-          fontWeight: 700,
-          fontSize: 17,
-        }}
-      >
-        <div>✔️ Искала возможность заработка онлайн и нашла её в MetaBox</div>
-        <div>✔️ Использую современные AI-инструменты в работе</div>
-        <div>✔️ Делюсь своим опытом и открытиями </div>
-        <div>✔️ Верю,что учиться новому можно в любом возрасте </div>
-      </div>
     </div>
   </div>
 </section>
 
-      <section style={{ padding: "80px 24px", background: "#F1EBEF" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-          <h2 style={sectionTitleStyle}>Чем я могу быть полезной</h2>
-          <p style={sectionTextStyle}>Делюсь своим опытом и помогаю освоить современные инструменты для новых возможностей и дополнительного дохода.</p>
+      <section style={{ padding: "80px 24px", background: "#F8F3ED" }}>
+  <div style={{ maxWidth: 1100, margin: "0 auto" }}>
 
-          <div
-            style={{
-              marginTop: 36,
-              display: "grid",
-              gridTemplateColumns:  isMobile ? "1fr" : "repeat(3, 1fr)",
-              gap: 20,
-            }}
-          >
-            {[
-              "Покажу, какие AI-инструменты можно использовать в работе и повседневных задачах.",
-              "Расскажу о возможностях онлайн-развития без привязки к стране проживания.",
-              "Познакомлю с экосистемой MetaBox: обучением, инструментами и сообществом.",
-              "Объясню, как устроена биржа труда внутри платформы.",
-              "Поделюсь своим опытом освоения новых цифровых инструментов.",
-              "Покажу, с чего можно начать, если раньше вы не работали с AI."
-            ].map((service) => (
-              <div key={service} style={cardStyle}>
-                <div style={{ fontSize: 18, fontWeight: 700, color: "#8B5A2B" }}>{service}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+    <h2
+      style={{
+        ...sectionTitleStyle,
+        color: "#7A4A1B",
+        fontWeight: 800,
+      }}
+    >
+      Отзывы тех, кто начал с нуля
+    </h2>
 
-      <section style={{ padding: "80px 24px" }}>
-        <div style={{ maxWidth: 1000, margin: "0 auto", ...cardStyle, textAlign: "center" }}>
-          <h2 style={sectionTitleStyle}>Готовы узнать больше?</h2>
-          <p style={sectionTextStyle}>
-            Я сама прошла путь от поиска возможностей в новой стране до знакомства с MetaBox.
-              <br />
-            С удовольствием поделюсь своим опытом и отвечу на ваши вопросы.
-          </p>
+    <p
+      style={{
+        ...sectionTextStyle,
+        textAlign: "center",
+        marginBottom: 40,
+        color: "#8B5A2B",
+        fontWeight: 500,
+      }}
+    >
+      Примеры людей, которые начали осваивать современные AI-инструменты
+      и получили свои первые результаты.
+    </p>
 
-          <div style={{ marginTop: 28 }}>
-            <a href="tel:+4915155688729" style={buttonPrimaryStyle}>
-              📞 позвонить сейчас
-            </a>
-          </div>
-        </div>
-      </section>
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: isMobile ? "1fr" : "repeat(3, 1fr)",
+        gap: isMobile ? 20 : 24,
+        alignItems: "start",
+      }}
+    >
+      <img
+        src="/reviews/result.jpg"
+        alt=""
+        style={{
+          width: "100%",
+          height: "auto",
+          objectFit: "contain",
+          borderRadius: 20,
+          boxShadow: "0 10px 25px rgba(0,0,0,0.08)",
+          transform: isMobile ? "none" : "rotate(-2deg)",
+        }}
+      />
 
+      <img
+        src="/reviews/result1.jpg"
+        alt=""
+        style={{
+          width: "100%",
+          height: "auto",
+          objectFit: "contain",
+          borderRadius: 20,
+          boxShadow: "0 10px 25px rgba(0,0,0,0.08)",
+          transform: isMobile ? "none" : "rotate(1.5deg)",
+        }}
+      />
 
+      <img
+        src="/reviews/result2.jpg"
+        alt=""
+        style={{
+          width: "100%",
+          height: "auto",
+          objectFit: "contain",
+          borderRadius: 20,
+          boxShadow: "0 10px 25px rgba(0,0,0,0.08)",
+          transform: isMobile ? "none" : "rotate(-1deg)",
+        }}
+      />
 
+    </div>
+
+  </div>
+</section>
 
 <section style={{ padding: "80px 24px" }}>
   <div style={{ maxWidth: 760, margin: "0 auto", ...cardStyle }}>
-    <h2 style={sectionTitleStyle}>Оставьте мне короткое сообщение и я свяжусь с Вами</h2>
-    <p style={sectionTextStyle}>А что если начать сейчас?
-
-Не обязательно иметь опыт в IT или разбираться в технологиях.
-
-Главное — желание развиваться и использовать возможности, которые доступны сегодня каждому.
-
-Я расскажу о современных инструментах, обучении, вариантах развития и помогу сделать первый шаг.
+    <h2 style={sectionTitleStyle}>Оставьте контакты для связи</h2>
+    <p style={sectionTextStyle}>Расскажите пару слов о себе или задайте вопрос.
+        Я отвечу в удобном для Вас мессенджере или по электронной почте.
 </p>
 
     <form onSubmit={handleSubmit} style={{ marginTop: 28, display: "grid", gap: 14 }}>
@@ -463,10 +474,11 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
           borderRadius: 10,
           border: "1px solid #D9C3CF",
           fontSize: 16,
+          fontFamily: "inherit",
         }}
       />
       <input
-        placeholder="Телефон"
+        placeholder="Любой удобный для Вас мессенджер или e-mail"
         value={phone}
         onChange={(e) => setPhone(e.target.value)}
         style={{
@@ -474,10 +486,11 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
           borderRadius: 10,
           border: "1px solid #D9C3CF",
           fontSize: 16,
+          fontFamily: "inherit",
         }}
       />
       <textarea
-        placeholder="Короткое сообщение"
+        placeholder="Напишите здесь Ваше сообщение или просто оставьте смайлик"
         value={comment}
         onChange={(e) => setComment(e.target.value)}
         rows={5}
@@ -486,11 +499,11 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
           borderRadius: 10,
           border: "1px solid #D9C3CF",
           fontSize: 16,
-          resize: "vertical",
+          fontFamily: "inherit",
         }}
       />
       <button type="submit" style={buttonPrimaryStyle} disabled={loading}>
-        {loading ? "Отправляем..." : "Получить обратную связь"}
+        {loading ? "Отправляем..." : "Отправить сообщение"}
       </button>
     </form>
   </div>
@@ -510,14 +523,25 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         gap: 20,
       }}
     >
-      <a
-        href="tel:+4915155688729"
-        style={contactButtonStyle}
-        onMouseEnter={(e) => (e.currentTarget.style.background = "#B67A3A")}
-        onMouseLeave={(e) => (e.currentTarget.style.background = "#C58A4A")}
-      >
-        <FaPhone /> Телефон
-      </a>
+     <a
+      href="https://wa.me/4915155688729"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        display: "inline-block",
+        background: "#C28B52",
+        color: "#FFFFFF",
+        textDecoration: "none",
+        padding: "16px 32px",
+        borderRadius: 14,
+        fontWeight: 700,
+        fontSize: isMobile ? 18 : 20,
+        textAlign: "center",
+      }}
+    >
+      <FaWhatsapp style={{ marginRight: 8 }} />
+      💬 WhatsApp
+    </a>
 
       <a
         href="https://t.me/rybka_yara"
