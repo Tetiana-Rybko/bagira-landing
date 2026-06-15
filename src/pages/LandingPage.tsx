@@ -128,7 +128,7 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
       position: "absolute",
       inset: 0,
       background:
-        "linear-gradient(90deg, rgba(255,244,232,0.88) 0%, rgba(255,244,232,0.92) 32%, rgba(255,244,232,0.45) 48%, rgba(255,244,232,0.05) 68%, rgba(255,244,232,0) 100%)",
+        "linear-gradient(90deg, rgba(255,244,232,0.9) 0%, rgba(255,244,232,0.7) 15%, rgba(255,244,232,0.2) 28%, rgba(255,244,232,0) 40%)",
       zIndex: 1,
     }}
   />
@@ -150,10 +150,10 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
   >
     <div>
       <div style={{ fontSize: isMobile ? 36 : 52, fontWeight: 800, color: "#B8895A", lineHeight: 1 }}>
-        Татьяна Рыбко
+
       </div>
       <div style={{ marginTop: 18, fontSize: isMobile ? 22 : 28, fontWeight: 600, color: "#B8895A" }}>
-        партнер MetaBox
+
       </div>
     </div>
 
@@ -166,11 +166,10 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
       }}
     >
       <a href="#about" style={{ color: "#FFFFFF", textDecoration: "none" }}>
-        обо мне
       </a>
 
       <a href="#contacts" style={{ color: "#FFFFFF", textDecoration: "none" }}>
-        контакты
+
       </a>
     </nav>
   </div>
@@ -195,11 +194,11 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         letterSpacing: "-1px",
       }}
     >
-      ЖИЗНЬ,
+      КОГДА КАЖЕТСЯ,
       <br />
-      КОТОРУЮ ВЫ
+      ЧТО ПОРА
       <br />
-      СОЗДАЕТЕ.
+      ЧТО-ТО МЕНЯТЬ
     </h1>
 
     <p
@@ -212,28 +211,37 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         fontWeight: 500,
       }}
     >
-      ЗАРАБОТОК
+      Для мам в декрете.
       <br />
-      ОНЛАЙН
+      Для тех, кто ищет дополнительный доход.
       <br />
-      БЕЗ ОПЫТА
+      Для тех, кто хочет работать удалённо.
+      <br />
+      Для тех, кто понимает, что будущее уже меняется — и хочет
+      <br />
+      успеть занять в нём своё место.
+
     </p>
 
     <p
       style={{
         margin: "28px 0 0",
         maxWidth: isMobile ? 260 : 520,
-        fontSize: isMobile ? 14 : 18,
-        lineHeight: 1.7,
-        color: "#8B5A2B",
+        fontWeight: 500,
+        fontSize: isMobile ? 15: 20,
+        lineHeight: 1.8,
+        color: "#6B4226",
       }}
     >
-      В экосистеме MetaBox доступны обучающие курсы, современные AI-инструменты для работы и внутренняя биржа труда.
+      <em>Поделюсь своим опытом перехода
       <br />
-      Даже если раньше вы не работали с технологиями,
+      в новую онлайн-сферу.
+      <br />
+     Покажу направления, которые сегодня
+     осваивают обычные люди без опыта.
+      </em>
 
-      <br />
-      здесь можно освоить новые навыки шаг за шагом и открыть для себя дополнительные возможности для заработка.
+
     </p>
 
     <div
@@ -245,47 +253,9 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         flexWrap: "wrap",
       }}
     >
-      <a
-        href="#contacts"
-        style={{
-          display: "inline-block",
-          background: "#B8895A",
-          color: "#FFFFFF",
-          textDecoration: "none",
-          borderRadius: 10,
-          padding: "16px 28px",
-          fontWeight: 700,
-          fontSize: 17,
-          border: "none",
-          width: isMobile ? "100%" : "auto",
-          boxSizing: "border-box",
-          textAlign: "center",
-        }}
-      >
-        📞 Получить консультацию
-      </a>
 
-      <a
-        href="https://t.me/rybka_yara"
-        target="_blank"
-        rel="noreferrer"
-        style={{
-          display: "inline-block",
-          background: "rgba(255,255,255,0.65)",
-          color: "#9A6A3A",
-          textDecoration: "none",
-          borderRadius: 10,
-          padding: "16px 28px",
-          fontWeight: 700,
-          fontSize: 17,
-          border: "1px solid #B8895A",
-          width: isMobile ? "100%" : "auto",
-          boxSizing: "border-box",
-          textAlign: "center",
-        }}
-      >
-        Написать в Telegram
-      </a>
+
+
     </div>
   </div>
 </section>
