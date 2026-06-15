@@ -201,48 +201,58 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
       ЧТО-ТО МЕНЯТЬ
     </h1>
 
-    <p
+    <div
       style={{
-        margin: "28px 0 0",
-        maxWidth: isMobile ? 300 : 520,
-        fontSize: isMobile ? 17 : 24,
-        lineHeight: 1.45,
-        color: "#9A6A3A",
-        fontWeight: 500,
+        width: "fit-content",
+        maxWidth: isMobile ? 320 : 520,
+        background: isMobile
+          ? "rgba(255,255,255,0.82)"
+          : "transparent",
+        borderRadius: isMobile ? 18 : 0,
+        padding: isMobile ? "14px 16px" : 0,
       }}
     >
-      Для мам в декрете.
-      <br />
-      Для тех, кто ищет дополнительный доход.
-      <br />
-      Для тех, кто хочет работать удалённо.
-      <br />
-      Для тех, кто понимает, что будущее уже меняется — и хочет
-      <br />
-      успеть занять в нём своё место.
+      <p
+        style={{
+          margin: "28px 0 0",
+          maxWidth: isMobile ? 300 : 520,
+          fontSize: isMobile ? 17 : 24,
+          lineHeight: 1.45,
+          color: "#9A6A3A",
+          fontWeight: 500,
+        }}
+      >
+        Для мам в декрете.
+        <br />
+        Для тех, кто ищет дополнительный доход.
+        <br />
+        Для тех, кто хочет работать удалённо.
+        <br />
+        Для тех, кто понимает, что будущее уже меняется — и хочет
+        <br />
+        успеть занять в нём своё место.
+      </p>
 
-    </p>
-
-    <p
-      style={{
-        margin: "28px 0 0",
-        maxWidth: isMobile ? 300 : 520,
-        fontWeight: 500,
-        fontSize: isMobile ? 14: 20,
-        lineHeight: 1.6,
-        color: "#6B4226",
-      }}
-    >
-      <em>Поделюсь своим опытом перехода
-      <br />
-      в новую онлайн-сферу.
-      <br />
-     Покажу направления, которые сегодня
-     осваивают обычные люди без опыта.
-      </em>
-
-
-    </p>
+      <p
+        style={{
+          margin: "28px 0 0",
+          maxWidth: isMobile ? 300 : 520,
+          fontWeight: 500,
+          fontSize: isMobile ? 14 : 20,
+          lineHeight: 1.6,
+          color: "#6B4226",
+        }}
+      >
+        <em>
+          Поделюсь своим опытом перехода
+          <br />
+          в новую онлайн-сферу.
+          <br />
+          Покажу направления, которые сегодня
+          осваивают обычные люди без опыта.
+        </em>
+      </p>
+    </div>
 
     <div
       style={{
