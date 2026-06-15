@@ -119,7 +119,7 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     backgroundRepeat: "no-repeat",
     overflow: "hidden",
     alignItems: isMobile ? "flex-start" : "center",
-    backgroundPosition: isMobile ? "center center" : "80% center",
+    backgroundPosition: isMobile ? "58% center" : "80% center",
     padding: isMobile ? "24px 20px 48px" : "40px 24px",
   }}
 >
@@ -179,19 +179,19 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
       position: "relative",
       zIndex: 2,
       textAlign: "left",
-      maxWidth: isMobile ? "100%" : 620,
+      maxWidth: isMobile ? 310 : 620,
       marginLeft: isMobile ? 0 : 48,
-      paddingTop: isMobile ? 12 : 120,
+      paddingTop: isMobile ? 24 : 120,
     }}
   >
     <h1
       style={{
         margin: 0,
-        fontSize: isMobile ? 42 : 62,
+        fontSize: isMobile ? 34 : 62,
         lineHeight: isMobile ? 1.05 : 1.08,
         fontWeight: 900,
         color: "#6B3A0A",
-        letterSpacing: "-1px",
+        letterSpacing: isMobile ? "-0.5px" : "-1px",
       }}
     >
       КОГДА КАЖЕТСЯ,
@@ -204,8 +204,8 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     <p
       style={{
         margin: "28px 0 0",
-        maxWidth: isMobile ? 260 : 520,
-        fontSize: isMobile ? 18 : 24,
+        maxWidth: isMobile ? 300 : 520,
+        fontSize: isMobile ? 17 : 24,
         lineHeight: 1.45,
         color: "#9A6A3A",
         fontWeight: 500,
@@ -226,10 +226,10 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     <p
       style={{
         margin: "28px 0 0",
-        maxWidth: isMobile ? 260 : 520,
+        maxWidth: isMobile ? 300 : 520,
         fontWeight: 500,
-        fontSize: isMobile ? 15: 20,
-        lineHeight: 1.8,
+        fontSize: isMobile ? 14: 20,
+        lineHeight: 1.6,
         color: "#6B4226",
       }}
     >
