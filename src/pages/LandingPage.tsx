@@ -202,51 +202,57 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     </h1>
 
     <div
-  style={{
-    marginTop: 28,
-    width: isMobile ? 320 : "fit-content",
-    maxWidth: isMobile ? "calc(100vw - 48px)" : 520,
-    background: isMobile ? "rgba(255, 248, 240, 0.94)" : "transparent",
-    borderRadius: isMobile ? 18 : 0,
-    padding: isMobile ? "18px 18px" : 0,
-    boxShadow: isMobile ? "0 12px 28px rgba(80, 45, 20, 0.18)" : "none",
-  }}
->
-  <p
-    style={{
-      margin: 0,
-      fontSize: isMobile ? 17 : 24,
-      lineHeight: isMobile ? 1.45 : 1.45,
-      color: isMobile ? "#4A2A14" : "#9A6A3A",
-      fontWeight: 600,
-    }}
-  >
-    Для мам в декрете.
-    <br />
-    Для тех, кто ищет дополнительный доход.
-    <br />
-    Для тех, кто хочет работать удалённо.
-    <br />
-    Для тех, кто понимает, что будущее уже меняется — и хочет успеть занять в нём своё место.
-  </p>
+      style={{
+        width: "fit-content",
+        maxWidth: isMobile ? 320 : 520,
+        background: isMobile
+          ? "rgba(255,255,255,0.82)"
+          : "transparent",
+        borderRadius: isMobile ? 18 : 0,
+        padding: isMobile ? "14px 16px" : 0,
+      }}
+    >
+      <p
+        style={{
+          margin: "28px 0 0",
+          maxWidth: isMobile ? 300 : 520,
+          fontSize: isMobile ? 17 : 24,
+          lineHeight: 1.45,
+          color: "#9A6A3A",
+          fontWeight: 500,
+        }}
+      >
+        Для мам в декрете.
+        <br />
+        Для тех, кто ищет дополнительный доход.
+        <br />
+        Для тех, кто хочет работать удалённо.
+        <br />
+        Для тех, кто понимает, что будущее уже меняется — и хочет
+        <br />
+        успеть занять в нём своё место.
+      </p>
 
-  <p
-    style={{
-      margin: "18px 0 0",
-      fontSize: isMobile ? 15 : 20,
-      lineHeight: 1.6,
-      color: isMobile ? "#4A2A14" : "#6B4226",
-      fontWeight: 600,
-      fontStyle: "italic",
-    }}
-  >
-    Поделюсь своим опытом перехода
-    <br />
-     в новую онлайн-сферу.
-    <br />
-    Покажу направления, которые сегодня осваивают обычные люди без опыта.
-  </p>
-</div>
+      <p
+        style={{
+          margin: "28px 0 0",
+          maxWidth: isMobile ? 300 : 520,
+          fontWeight: 500,
+          fontSize: isMobile ? 14 : 20,
+          lineHeight: 1.6,
+          color: "#6B4226",
+        }}
+      >
+        <em>
+          Поделюсь своим опытом перехода
+          <br />
+          в новую онлайн-сферу.
+          <br />
+          Покажу направления, которые сегодня
+          осваивают обычные люди без опыта.
+        </em>
+      </p>
+    </div>
 
     <div
       style={{
