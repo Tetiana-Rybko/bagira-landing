@@ -380,7 +380,8 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
 </section>
 
       <section style={{ padding: "80px 24px", background: "#F8F3ED" }}>
-  <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+  <div
+     style={{ maxWidth: 1100, margin: "0 auto" }}>
 
     <h2
       style={{
@@ -449,6 +450,44 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
           borderRadius: 20,
           boxShadow: "0 10px 25px rgba(0,0,0,0.08)",
           transform: isMobile ? "none" : "rotate(-1deg)",
+         }}
+        />
+
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        gap: isMobile ? 18 : 28,
+        flexDirection: isMobile ? "column" : "row",
+        marginTop: 24,
+
+        }}
+      />
+      <img
+        src="/reviews/result3.jpg"
+        alt=""
+        style={{
+          width: "100%",
+          height: "auto",
+          objectFit: "contain",
+          borderRadius: 20,
+          boxShadow: "0 10px 25px rgba(0,0,0,0.08)",
+          transform: isMobile ? "none" : "rotate(-1deg)",
+        }}
+      />
+        <img
+        src="/reviews/result4.jpg"
+        alt=""
+        style={{
+          width: "100%",
+          height: "auto",
+          objectFit: "contain",
+          borderRadius: 20,
+          boxShadow: "0 10px 25px rgba(0,0,0,0.08)",
+          transform: isMobile ? "none" : "rotate(3deg)",
+          marginTop: isMobile ? 0 : -15,
+
         }}
       />
 
